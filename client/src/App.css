@@ -1,0 +1,29 @@
+.highlight {
+    --color-base-yellow: #fedb63;
+    --mark-skew: 16px;
+    --mark-height: 1em;
+    --mark-overlap: 0.3em;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom right, transparent 50%, var(--color-base-yellow) 50%), linear-gradient(var(--color-base-yellow), var(--color-base-yellow)), linear-gradient(to top left, transparent 50%, var(--color-base-yellow) 50%);
+    background-position: 16px, 32px, 100%;
+    background-size: var(--mark-skew) var(--mark-height), calc(100% - 48px) var(--mark-height), var(--mark-skew) var(--mark-height);
+    margin-inline: calc(var(--mark-overlap) * -1);
+    padding-inline: var(--mark-overlap);
+}
+
+
+.infinite_scroll {
+    height: 150px;
+    animation: scroll 240s linear infinite;
+    column-gap: 100px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    } to {
+        transform: translateX(-85%);
+    }
+}
+
+
