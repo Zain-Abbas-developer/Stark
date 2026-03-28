@@ -1,5 +1,6 @@
 import React, { use, useState } from 'react'
 import './App.css'
+import { motion } from "motion/react"
 import Navbar from './components/Navbar'
 import homePage_stats from '../src/assets/img/homepage-header-2025.webp'
 import speed_accessibility from '../src/assets/img/speed-up-your-accessibility.png'
@@ -13,8 +14,15 @@ import enterprise_feature from '../src/assets/img/enterprise-grade-platform-feat
 import best_roi from '../src/assets/img/Best-roi.png'
 import leader from '../src/assets/img/leader.png'
 import users_love from '../src/assets/img/users-love-us.png'
+import homepage from '../src/assets/img/homepage-blob-3.png'
+import Seven from './pages/main/Seven'
+import Eigth from './pages/main/Eigth'
+import Button from './components/Button'
+import Footer from './components/Footer'
 
 const App = () => {
+
+    
   return (
     <>
       <header className='relative bg-[url(/src/assets/img/gradient-bg.webp)] bg-center bg-cover h-[147vh] w-full'>
@@ -162,24 +170,58 @@ const App = () => {
         </section>
         <section className='w-full bg-[#f3f2fa]'>
           <div className='w-[1200px] max-w-[1200px] mx-auto'>
-            <div className='flex flex-col items-center justify-center text-center pt-[200px]'>
-              <div className='images flex flex-wrap gap-x-6'>
-                <img src={best_roi} alt="" className='w-[154px] h-[177px]'/>
-                <img src={leader} alt="" className='w-[154px] h-[177px]'/>
-                <img src={users_love} alt=""  className='w-[154px] h-[177px]'/>
+              <div className='flex flex-col items-center justify-center text-center pt-[200px]'>
+                <div className='images flex flex-wrap gap-x-6'>
+                  <motion.div
+                  style={{ willChange: 'auto'}}
+                  initial={{opacity: 0, scale: 0.8}}
+                  whileInView={{opacity: 1, scale: 1}}
+                  transition={{duration: 0.1, ease: 'easeInOut'}}
+                  >
+                    <img src={best_roi} alt="" className='w-[154px] h-[177px]'/>
+                  </motion.div>
+                  <motion.div
+                  style={{ willChange: 'auto'}}
+                  initial={{opacity: 0, scale: 0.8}}
+                  whileInView={{opacity: 1, scale: 1}}
+                  transition={{duration: 0.3, ease: 'easeInOut'}}
+                  >
+                    <img src={leader} alt="" className='w-[154px] h-[177px]'/>
+                  </motion.div>
+                  <motion.div
+                  style={{ willChange: 'auto'}}
+                  initial={{opacity: 0, scale: 0.8}}
+                  whileInView={{opacity: 1, scale: 1}}
+                  transition={{duration: 0.5, ease: 'easeInOut'}}
+                  >
+                    <img src={users_love} alt=""  className='w-[154px] h-[177px]'/>
+                  </motion.div>
+                 </div>
+                <h1 className='text-[3.2em] text-[#10284b] font-extrabold px-[150px] leading-[60px] mt-10 pb-7 text-center'>Built to <span className='bg-[#fedb63]'> deliver business value,</span> loved by the community.</h1>
+                <p className='text-[1.25em] font-medium px-[220px] pb-8 text-[#10284b]'>Stark is the only Continuous Accessibility platform that accelerates time-to-compliance from design and code to QA and PM, and helps companies of all sizes deliver highest quality experiences for all users.</p>
+                <section className='mt-8 mb-30 flex justify-center p-4'>
+                  <div className='flex  flex-wrap items-center justify-center gap-x-6 gap-y-4 rounded-xl border-2 border-[#381fd1] bg-[rgb(242, 242, 242)] p-6'>
+                    <svg role="img" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="min-w-[70px]"><title>G2 Reviews Logo</title><path d="M70 35C70 54.334 54.334 70 35 70C15.666 70 0 54.334 0 35C0 15.666 15.666 0 35 0C54.334 0 70 15.68 70 35Z" fill="#FF492C"></path><path d="M50.29 29.266H41.246V28.846C41.246 27.306 41.554 26.032 42.17 25.038C42.786 24.03 43.85 23.148 45.39 22.364L46.09 22.014C47.336 21.384 47.658 20.838 47.658 20.194C47.658 19.424 46.986 18.864 45.908 18.864C44.62 18.864 43.654 19.536 42.982 20.894L41.246 19.158C41.624 18.346 42.24 17.702 43.052 17.184C43.878 16.666 44.788 16.414 45.782 16.414C47.028 16.414 48.106 16.736 48.988 17.408C49.898 18.08 50.346 19.004 50.346 20.166C50.346 22.028 49.296 23.162 47.336 24.17L46.23 24.73C45.054 25.318 44.48 25.85 44.312 26.788H50.29V29.266ZM49.492 32.122H39.594L34.652 40.69H44.55L49.506 49.258L54.448 40.69L49.492 32.122ZM35.506 46.416C29.206 46.416 24.082 41.292 24.082 34.992C24.082 28.692 29.206 23.568 35.506 23.568L39.426 15.378C38.152 15.126 36.85 15 35.506 15C24.46 15 15.5 23.96 15.5 34.992C15.5 46.038 24.446 54.998 35.506 54.998C39.902 54.998 43.976 53.57 47.28 51.162L42.94 43.658C40.952 45.366 38.348 46.416 35.506 46.416Z" fill="white"></path></svg>
+                    <h3 className='text-center text-[28px] font-bold text-[#381fd1]'>“My #1 go-to accessibility tool for every project!”</h3>
+                  </div>
+                </section>
               </div>
-              <h1 className='text-[3.2em] text-[#10284b] font-extrabold px-[150px] leading-[60px] mt-10 pb-7 text-center'>Built to <span className='bg-[#fedb63]'> deliver business value,</span> loved by the community.</h1>
-              <p className='text-[1.25em] font-medium px-[220px] pb-8 text-[#10284b]'>Stark is the only Continuous Accessibility platform that accelerates time-to-compliance from design and code to QA and PM, and helps companies of all sizes deliver highest quality experiences for all users.</p>
-              <section className='mt-8 flex justify-center p-4'>
-                <div className='flex  flex-wrap items-center justify-center gap-x-6 gap-y-4 rounded-xl border-2 border-[#381fd1] bg-[rgb(242, 242, 242)] p-6'>
-                  <svg role="img" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" class="min-w-[70px]"><title>G2 Reviews Logo</title><path d="M70 35C70 54.334 54.334 70 35 70C15.666 70 0 54.334 0 35C0 15.666 15.666 0 35 0C54.334 0 70 15.68 70 35Z" fill="#FF492C"></path><path d="M50.29 29.266H41.246V28.846C41.246 27.306 41.554 26.032 42.17 25.038C42.786 24.03 43.85 23.148 45.39 22.364L46.09 22.014C47.336 21.384 47.658 20.838 47.658 20.194C47.658 19.424 46.986 18.864 45.908 18.864C44.62 18.864 43.654 19.536 42.982 20.894L41.246 19.158C41.624 18.346 42.24 17.702 43.052 17.184C43.878 16.666 44.788 16.414 45.782 16.414C47.028 16.414 48.106 16.736 48.988 17.408C49.898 18.08 50.346 19.004 50.346 20.166C50.346 22.028 49.296 23.162 47.336 24.17L46.23 24.73C45.054 25.318 44.48 25.85 44.312 26.788H50.29V29.266ZM49.492 32.122H39.594L34.652 40.69H44.55L49.506 49.258L54.448 40.69L49.492 32.122ZM35.506 46.416C29.206 46.416 24.082 41.292 24.082 34.992C24.082 28.692 29.206 23.568 35.506 23.568L39.426 15.378C38.152 15.126 36.85 15 35.506 15C24.46 15 15.5 23.96 15.5 34.992C15.5 46.038 24.446 54.998 35.506 54.998C39.902 54.998 43.976 53.57 47.28 51.162L42.94 43.658C40.952 45.366 38.348 46.416 35.506 46.416Z" fill="white"></path></svg>
-                  <h3 className='text-center text-[28px] font-bold text-[#381fd1]'>“My #1 go-to accessibility tool for every project!”</h3>
-                </div>
-              </section>
-            </div>
           </div>
         </section>
+        {/* seventh section */}
+        <section className='w-full flex justify-center'>
+            <div className='w-[70%] h-[120vh] bg-[#99D6CC] rounded-[40px] mb-15 mx-auto z-10'><Seven/></div> 
+        </section>
+        {/* eigth section */}
+        <section className='relative w-full flex justify-center mb-50'>
+            <span className='absolute -top-5 left-65 z-1'><svg className='text-black' width="445" height="410" viewBox="0 0 445 410" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute -left-64 -top-20" aria-hidden="true"><path d="M46.9335 338.378C30.213 326.986 16.571 311.079 8.5949 292.456C-9.37173 250.476 0.866772 195.191 41.9466 172.708C83.7279 149.84 135.827 142.321 169.401 106.081C195.151 78.2885 205.454 36.7387 236.894 15.6064C288.077 -18.8073 361.822 12.7332 400.592 51.8842C416.519 67.9692 428.511 88.7202 430.825 111.237C433.139 133.755 425.957 156.059 422.905 178.508C416.221 227.494 441.62 264.257 444.197 310.598C448.551 388.984 362.658 423.241 298.438 405C244.721 389.738 198.832 356.367 141.164 355.961C128.052 355.865 114.918 357.677 101.828 357.128C82.1499 356.057 63.154 349.568 46.9335 338.378Z" fill="#381FD1"></path></svg></span>
+            <span className='absolute top-15 right-0 z-1 overflow-auto'><img src={homepage} alt="" /></span>
+            <div className='relative w-[70%] h-[99vh] bg-[#faf5ff] rounded-[40px] mx-auto z-10 shadow-lg'><Eigth/></div> 
+        </section>
       </main>
+      <footer className='flex flex-col gap-4 w-full h-[120vh] bg-[#10284b]'>
+        <Footer/>
+      </footer>
     </>
   )
 }
